@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Video Factory Drive Deliveryは、完成した動画を元の画質のまま本人のGoogle Driveへ保存する納品ツールです。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Video Factory Drive Delivery | アプリ紹介</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Video Factory Drive Delivery ホーム">
+        <span class="brand-mark" aria-hidden="true">VF<span></span></span>
+        <span>Video Factory<span class="brand-sub">Drive Delivery</span></span>
+      </a>
+      <nav aria-label="メインナビゲーション">
+        <a href="index.html" aria-current="page">アプリ紹介</a>
+        <a href="privacy.html">プライバシー</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="eyebrow"><span></span> 動画制作の、その先へ。</div>
+        <h1>完成動画を、<br><span>そのままDriveへ。</span></h1>
+        <p class="hero-copy">Video Factory Drive Deliveryは、制作した動画を本人のGoogle Driveへ保存する納品ツールです。小さなファイルも、大きな動画も、元の画質と内容を保って届けます。</p>
+        <a class="button" href="privacy.html">データの取り扱いを確認する <span aria-hidden="true">↗</span></a>
+        <div class="hero-note">運営：バシバシ <span aria-hidden="true">／</span> Google Drive APIを利用</div>
+        <div class="delivery-visual" aria-label="完成したMP4を、同じ品質の1ファイルとしてGoogle Driveへ保存">
+          <div class="file-card"><span class="file-icon" aria-hidden="true">▶</span><span class="file-name">完成動画<span>MP4 · 元の品質</span></span><span class="file-badge">READY</span></div>
+          <div class="transfer-line" aria-hidden="true"><span></span><i></i><i></i><i></i><span></span></div>
+          <div class="file-card destination"><span class="check-icon" aria-hidden="true">✓</span><span class="file-name">あなたのGoogle Drive<span>1本の動画として保存</span></span><span class="file-badge">VERIFIED</span></div>
+        </div>
+      </section>
+
+      <section class="feature-grid" aria-label="主な機能">
+        <article class="feature"><span class="feature-number">01 / QUALITY</span><h2>画質は、そのまま。</h2><p>納品のための再圧縮や解像度変更を行わず、完成ファイルのバイト列を保持します。</p></article>
+        <article class="feature"><span class="feature-number">02 / RESUME</span><h2>中断しても、続きから。</h2><p>再開可能アップロードで通信を小分けに送信。Drive上では元の1ファイルとして保存します。</p></article>
+        <article class="feature"><span class="feature-number">03 / VERIFY</span><h2>保存後まで、確認。</h2><p>保存先・ファイルサイズ・チェックサムを照合し、確認できたファイルのリンクを返します。</p></article>
+      </section>
+
+      <section class="info-section">
+        <div><p class="section-label">ABOUT THE APP</p><h2>本人の制作環境から、<br>本人のDriveへ。</h2></div>
+        <div class="prose"><p>利用者が選択した完成動画を、動画制作・実行環境からGoogle Drive APIで送信します。Googleへの接続には、利用者が承認したOAuth認証を使用します。</p><p>アプリが作成したファイル、または利用者がアクセスを許可したファイルを扱う <code>drive.file</code> 権限を使用します。保存先は、本人のマイドライブ直下を基本とします。</p><p>このWebサイトはアプリの説明用です。このページで動画のアップロードやGoogle認証情報の入力を受け付けることはありません。</p></div>
+      </section>
+
+      <section class="contact-panel" aria-labelledby="contact-heading">
+        <div><p class="section-label">CONTACT</p><h2 id="contact-heading">運営・お問い合わせ</h2><p>運営者：バシバシ</p></div>
+        <a class="contact-mail" href="mailto:ishibashi.kyoto02@gmail.com">ishibashi.kyoto02@gmail.com <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 バシバシ</span><a href="privacy.html">プライバシーポリシー</a><span>Video Factory Drive Delivery</span></footer>
+  </div>
+</body>
+</html>

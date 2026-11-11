@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Video Factory Drive DeliveryにおけるGoogle Driveデータ、動画、認証情報の利用目的、保存、削除、アクセス解除について説明します。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>プライバシーポリシー | Video Factory Drive Delivery</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Video Factory Drive Delivery ホーム"><span class="brand-mark" aria-hidden="true">VF<span></span></span><span>Video Factory<span class="brand-sub">Drive Delivery</span></span></a>
+      <nav aria-label="メインナビゲーション"><a href="index.html">アプリ紹介</a><a href="privacy.html" aria-current="page">プライバシー</a></nav>
+    </header>
+
+    <main id="main" class="policy-main">
+      <header class="policy-heading"><p class="section-label">PRIVACY POLICY</p><h1>データの扱いを、<br>明確に。</h1><p>Video Factory Drive Delivery プライバシーポリシー</p><p class="updated">最終更新日：2026年11月12日</p></header>
+      <div class="policy-intro">このポリシーは、バシバシが運営するVideo Factory Drive Delivery（以下「本アプリ」）のGoogle Driveへの動画納品機能と、その説明サイトに適用します。</div>
+
+      <section class="policy-section"><h2><span>01</span> 利用する情報と目的</h2><p>本アプリは、利用者が指定した動画をGoogle Driveへ保存し、中断再開、重複作成の防止、保存結果の確認を行うために、次の情報を扱います。</p>
+        <div class="table-scroll"><table><thead><tr><th scope="col">情報</th><th scope="col">利用目的</th></tr></thead><tbody>
+          <tr><th scope="row">完成動画・ファイル情報</th><td>選択された動画の内容、ファイル名・種類・サイズ、MD5・SHA-256などのチェックサムを、送信と照合に利用します。</td></tr>
+          <tr><th scope="row">Google Driveの情報</th><td>ファイルID、保存先、サイズ、MD5、削除状態などを、保存結果の確認に利用します。</td></tr>
+          <tr><th scope="row">アカウントの識別情報</th><td>Google DriveのpermissionIdを、異なるアカウントのアップロード状態を区別するために利用します。識別子の実値はメモリー内で扱い、保存用の状態キーにはハッシュ化して組み込みます。</td></tr>
+          <tr><th scope="row">OAuth認証情報</th><td>OAuthクライアント情報、refresh token、access tokenを、利用者が承認したDrive操作と認証の更新に利用します。</td></tr>
+          <tr><th scope="row">アップロード状態</th><td>予約済みファイルID、送信済み位置、再開用URL、照合結果などを、中断再開と重複防止に利用します。</td></tr>
+        </tbody></table></div>
+      </section>
+
+      <section class="policy-section"><h2><span>02</span> Googleへのアクセス範囲</h2><p>本アプリはGoogle OAuthで利用者の許可を受け、<code>https://www.googleapis.com/auth/drive.file</code> スコープを使用します。この権限で、本アプリが作成したファイル、または利用者がアクセスを許可したファイルを扱います。</p><p>本アプリの納品処理では、動画の作成・保存と、それに必要なメタデータの確認を行います。保存した動画を一般公開するための共有権限変更は行いません。</p></section>
+
+      <section class="policy-section"><h2><span>03</span> 処理環境と外部サービス</h2><p>本アプリの処理はOpenAIのCodex Cloud環境で実行し、選択された動画と必要な情報をGoogleの認証サービスおよびGoogle Driveへ送信します。OAuth認証情報は制作環境の設定で管理し、通常運用で更新したaccess tokenはメモリー内で使用します。</p><p>GoogleおよびOpenAIによるサービス提供上のデータの取り扱いには、それぞれの規約・プライバシーポリシーも適用されます。</p><ul><li><a href="https://policies.google.com/privacy">Google プライバシーポリシー</a></li><li><a href="https://openai.com/policies/privacy-policy/">OpenAI プライバシーポリシー</a></li></ul></section>
+
+      <section class="policy-section"><h2><span>04</span> Google APIの情報の利用</h2><p>本アプリによるGoogle APIから取得した情報の利用および他のアプリへの転送は、Limited Useの要件を含む<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>に従います。</p><p>運営者は、Google APIから取得した情報を広告配信、販売、AIモデルの学習の目的では利用しません。動画の保存とその確認など、利用者が指定した納品処理に必要な範囲で取り扱います。</p></section>
+
+      <section class="policy-section"><h2><span>05</span> 保存期間</h2><p>元動画、Google Drive上の動画、アップロード状態には、本アプリによる自動削除期限を設けていません。利用者または環境管理者が必要な期間保持し、不要になった時点で削除します。</p><p>アップロード完了後は再開用URLを状態記録から除去しますが、ファイル名、サイズ、チェックサム、DriveのファイルID、照合結果などは、再実行時の重複防止のために保持します。認証情報は環境設定から削除されるまで管理され、トークンにはGoogleの有効期限・失効の条件が適用されます。</p></section>
+
+      <section class="policy-section"><h2><span>06</span> アクセス解除とデータの削除</h2><ol><li>実行中のアップロードがあれば停止します。</li><li><a href="https://myaccount.google.com/connections">Googleアカウントの「第三者との接続」</a>で、本アプリへのアクセス許可を取り消せます。</li><li>制作環境の設定に登録した認証情報と、不要な元動画・アップロード状態を削除します。保存済みの環境コピーがある場合は、それらも環境管理機能で個別に扱います。</li><li>Google Drive上の動画を削除する場合は、Driveで別途削除します。</li></ol><p>アクセス許可の取り消しだけでは、すでに保存した動画は削除されません。状態を削除すると、中断再開と重複防止の履歴も失われます。GoogleやOpenAIの保存コピー・バックアップには、それぞれのサービスの削除方針が適用されます。</p></section>
+
+      <section class="policy-section"><h2><span>07</span> 安全管理</h2><p>Google APIとの通信にはHTTPSを使用します。認証情報は環境の保護された設定で管理し、アップロード状態へのアクセスはファイル権限で制限します。本アプリの通常の実行結果や説明サイトに、認証情報や再開用URLを掲載しません。</p></section>
+
+      <section class="policy-section"><h2><span>08</span> この説明サイトについて</h2><p>この説明サイトには、独自のアクセス解析、広告、トラッキング用スクリプト、入力フォームを設置していません。サイトから動画やGoogle認証情報を収集することはありません。</p><p>サイトの配信にはGitHub Pagesを使用します。GitHubはサービスの提供や安全管理のため、IPアドレスなどのアクセス情報を取り扱う場合があります。詳細は<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーステートメント</a>を参照してください。</p></section>
+
+      <section class="policy-section"><h2><span>09</span> 変更とお問い合わせ</h2><p>本アプリの仕様や運用の変更に合わせて、このポリシーを更新することがあります。更新時には、このページの最終更新日を変更します。</p><p>データの取り扱い・削除に関するお問い合わせ先は次のとおりです。</p><address>運営者：バシバシ<br>メール：<a href="mailto:ishibashi.kyoto02@gmail.com">ishibashi.kyoto02@gmail.com</a></address></section>
+      <a class="back-link" href="index.html">← アプリ紹介に戻る</a>
+    </main>
+    <footer class="site-footer"><span>© 2026 バシバシ</span><a href="index.html">アプリ紹介</a><span>Video Factory Drive Delivery</span></footer>
+  </div>
+</body>
+</html>
